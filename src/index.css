@@ -1,0 +1,27 @@
+* {
+  margin: unset;
+  padding: unset;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+  line-height: 2.16;
+}
+a {
+  text-transform: capitalize;
+  text-decoration: none;
+  color: #cfcfcf;
+  padding: 10px 16px;
+}
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1rem 3rem;
+  background-color: #1d1c1c;
+  color: #cfcfcf;
+}

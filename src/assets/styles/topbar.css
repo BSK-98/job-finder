@@ -1,0 +1,34 @@
+.topbar {
+    height: 4rem;
+    width: 100%;
+    background-color: #1d1d1d;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
+}
+nav {
+    display: flex;
+}
+nav a {
+    position: relative;
+    display: block;
+}
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    height: 4px;
+    width: 98%;
+    background-color: #cfcfcf;
+    transform: scale(0);
+    transition: transform .5s ease-in-out;
+}
+nav a:hover::after,
+
+nav a.acive::after {
+    transform: scale(1);
+}
