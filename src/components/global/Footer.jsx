@@ -1,7 +1,7 @@
 const Footer = () => {
     return (
         <footer>
-            &copy; {new Date().getFullYear()} All Reserved, Accounts
+            &copy; {new Date().getFullYear()} All Reserved, Jobs
         </footer>
     )
 }

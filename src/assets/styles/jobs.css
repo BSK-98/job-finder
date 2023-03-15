@@ -1,0 +1,74 @@
+.jobs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    background-color: #ececec;
+}
+.form {
+    padding: 18px;
+    width: 70%;
+    background-color: #fff;
+    border-radius: .3rem;
+}
+
+form{
+    width: 100%;
+}
+form h2 {
+    text-transform: capitalize;
+    color: #3b3b3b;
+    text-align: center;
+    padding: 2rem 2rem 3rem 2rem;
+}
+.inputs {
+    display: flex;
+    flex-wrap: wrap;
+}
+input {
+    display: block;
+    width: 100%;
+    padding: .5rem 1rem;
+    border: none;
+    outline: none;
+    border: solid thin #ccc;
+    border-radius: .3rem;
+}
+.input {
+    width: 48%;
+    margin: 1.1rem auto;
+    position: relative;
+}
+label {
+    text-transform: capitalize;
+    position: absolute;
+    top: -1.5rem;
+    left: 0.5rem;
+    color: #3b3b3b;
+    padding: .1rem .3rem;
+    background-color: #fff;
+    font-size: .8rem;
+    border-radius: .5rem;
+}
+label span {
+    color: crimson;
+    font-size: .9rem;
+}
+.jobs button {
+    background-color: #eb6868;
+    border: none;
+    border-radius: .6rem;
+    color: #fff;
+    padding: .6rem 3rem;
+    font-size: 1.091rem;
+    cursor: pointer;
+    transition: all .6s ease-in-out;
+    border: solid thin transparent;
+    margin-left: .5rem;
+}
+.jobs button:hover {
+    background-color: #fff;
+    border-color: #eb6868;
+    color: #eb6868;
+    margin-left: 1.5rem;
+}
