@@ -2,7 +2,8 @@ import { useState } from 'react';
 import './../assets/styles/jobs.css';
 
 const Services = () => {
-    
+    let userInfo = localStorage.getItem ("Frappe_account-sys_authenticattion_details");
+
     const [form, setForm] = useState({
         "name": "",
         "email": "",
@@ -18,16 +19,23 @@ const Services = () => {
             [event.target.id]: event.target.value,
         })
     }
+
     const handleSubmit = (e) => {
-
         e.preventDefault ();
-const url = "http://account-sys:8002/api/resource/Job%20Application";
 
+        const url = "http://account-sys:8002/api/resource/Job Application";
+        let accessToken = "";
+        if (userInfo) {
+            userInfo = JSON.parse (userInfo);
+            accessToken = userInfo.user.accessToken;
+            console.log(accessToken)
+        }
+        
         fetch(url, {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
-                'Content-Type': 'application/json',
+                'Content-Type': `token ${accessToken}`
             },
             body: JSON.stringify({
                 name: form.name,

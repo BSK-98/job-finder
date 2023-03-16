@@ -31,7 +31,30 @@ const Login = () => {
         })
         .then(res => res.json())
         .then(res => {
-            console.log(res);
+
+            console.log (res)
+            if (res.message.success == 1) {
+                if (!localStorage.getItem ("Frappe_account-sys_authenticattion_details")) {
+                    localStorage.setItem ("Frappe_account-sys_authenticattion_details", JSON.stringify({
+                        user: {
+                            username: res.message.username,
+                            email: res.message.email,
+                            accessToken: `${res.message.api_key}:${res.message.api__secret}`,
+                        }
+                    }));
+                    console.log ("loggin!")
+                }else {
+                    localStorage.setItem ("Frappe_account-sys_authenticattion_details", JSON.stringify({
+                        user: {
+                            username: res.message.username,
+                            email: res.message.email,
+                            accessToken: `${res.message.api_key}:${res.message.api__secret}`,
+                        }
+                    }));
+                    console.log ("loggin!")
+                }
+
+            }
         })
         
     }
